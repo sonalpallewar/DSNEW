@@ -29,11 +29,26 @@ public class Program
 {
 	private static bool AreAnagrams(string firstString, string secondString)
 	{
-		var firstStringChars = firstString.ToLower().ToList();
-		var secondStringChars = secondString.ToLower().ToList();
-		firstStringChars.Sort();
-		secondStringChars.Sort();
-		return firstStringChars.SequenceEqual(secondStringChars);
+		 if (firstString == null || secondString == null)
+    {
+        throw new ArgumentNullException("Both strings must be non-null.");
+    }
+
+    if (firstString.Length != secondString.Length)
+    {
+        return false; // Anagrams must have the same length
+    }
+
+    // Convert strings to lowercase character arrays
+    char[] firstStringChars = firstString.ToLower().ToCharArray();
+    char[] secondStringChars = secondString.ToLower().ToCharArray();
+
+    // Sort character arrays
+    Array.Sort(firstStringChars);
+    Array.Sort(secondStringChars);
+
+    // Compare sorted character arrays
+    return firstStringChars.SequenceEqual(secondStringChars);
 	}
 	
 	public static void Main()
