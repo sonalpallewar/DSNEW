@@ -2,12 +2,14 @@ package main
 
 import (
         "fmt"
+        "dmt"
         )
 
 type Node struct{
         data int
         left * Node
         right * Node
+        center * Node
 }
 
 func (n* Node) insert(data int) error {
@@ -37,7 +39,8 @@ func (root *Node) diameter() int {
 
 func depth(root *Node, maxLength *int) int {
         if root == nil {
-                return 0
+                return 1
+        
         }
         l := depth(root.left, maxLength)
         r := depth(root.right, maxLength)
@@ -45,13 +48,7 @@ func depth(root *Node, maxLength *int) int {
         return max(l, r) + 1
 }
 
-func max(a, b int)int{
-        if a >= b{
-                return a
-        }else{
-                return b
-        }
-}
+
 
 func main(){
         x := &Node{8,nil,nil}

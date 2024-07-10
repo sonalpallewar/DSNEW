@@ -33,6 +33,11 @@ func search(array []int, elementToFind int) int {
 	return -1
 }
 
+// IsAdult method returns true if the person is 18 years or older
+func (p *Person) IsAdult() bool {
+	return p.Age >= 18
+}
+
 func main() {
 	var array []int
 	var elementToFind int

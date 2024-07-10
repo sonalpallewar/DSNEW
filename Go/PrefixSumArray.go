@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func prefixSum(array []int) []int {
+func prefixSumnew(array []int) []int {
 	// Start from 1 because the first position not change
 	for i := 1; i < len(array); i++ {
 		// Adding present element with previous element
