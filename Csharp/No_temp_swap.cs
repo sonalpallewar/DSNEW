@@ -13,7 +13,26 @@ class Swap {
 		x = x - y; 
 		Console.WriteLine("After swapping: x = "
 						+ x + ", y = " + y); 
+		 // Test the MathOperations class
+        MathOperations mathOps = new MathOperations();
+        int sumResult = mathOps.Sum(3, 7);
+        int productResult = mathOps.Product(4, 5);
+
+        Console.WriteLine("Sum: " + sumResult);
+        Console.WriteLine("Product: " + productResult);
 	} 
+}
+public class MathOperations
+{
+    public int Sum(int a, int b)
+    {
+        return a + b;
+    }
+
+    public int Product(int a, int b)
+    {
+        return a * b;
+    }
 }
 /*
  ** Sample I/O
