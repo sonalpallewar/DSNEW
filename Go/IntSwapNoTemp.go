@@ -12,6 +12,8 @@ func main(){
 	fmt.Printf("x is %d, y is %d\n",x,y)
 	swapInt(&x,&y) // change this to swapIntXor if you want to try out swaping via xor functions
 	fmt.Printf("x is %d, y is %d\n",x,y)
+	fmt.Println("This program swapped 2 integers")
+
 }
 
 
@@ -23,6 +25,15 @@ func swapInt(x *int, y *int){
 	*x = *x - *y //x = x + y - x = y
 }
 
+
+
+//I'm using pointers just so that the pointers point to the correct integer after this function ends.
+func swapIntNew(x *int, y *int){
+	fmt.Println("Swapping x and y...")
+	*x = *x + *y //x = x + y
+	*y = *x - *y //y = x + y - y = x
+	*x = *x - *y //x = x + y - x = y
+	}
 
 //A function that does the same thing but with the xor function.
 func swapIntXor(x *int, y *int){
