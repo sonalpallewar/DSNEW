@@ -1,7 +1,4 @@
 using System;
-
-namespace SwapNumbers
-{
     class Program
     {
         static void Main(string[] args)
@@ -36,4 +33,4 @@ namespace SwapNumbers
             Console.ReadKey();
         }
     }
-}
+
