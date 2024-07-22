@@ -1,7 +1,4 @@
 using System;
-
-namespace GreetingProgram
-{
     class Program
     {
         static void Main(string[] args)
@@ -19,4 +16,4 @@ namespace GreetingProgram
             Console.ReadKey();
         }
     }
-}
+
