@@ -1,51 +1,39 @@
-// Program to swap two numbers without 
-// using temporary variable 
-using System; 
+using System;
 
-class Swap { 
-	public static void Main() 
-	{ 
-		int x = 10; 
-		int y = 5; 
-
-		x = x + y; 
-		y = x - y; 
-		x = x - y; 
-		Console.WriteLine("After swapping: x = "
-						+ x + ", y = " + y); 
-		 // Test the MathOperations class
-        MathOperations mathOps = new MathOperations();
-        int sumResult = mathOps.Sum(3, 7);
-        int productResult = mathOps.Product(4, 5);
-
-        Console.WriteLine("Sum: " + sumResult);
-        Console.WriteLine("Product: " + productResult);
-	} 
-}
-public class MathOperations
+namespace SwapNumbers
 {
-    public int Sum(int a, int b)
+    class Program
     {
-        return a + b;
-    }
+        static void Main(string[] args)
+        {
+            // Declare two variables
+            int number1, number2, temp;
 
-    public int Product(int a, int b)
-    {
-        return a * b;
+            // Get input from the user
+            Console.WriteLine("Enter the first number:");
+            number1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the second number:");
+            number2 = Convert.ToInt32(Console.ReadLine());
+
+            // Display the numbers before swapping
+            Console.WriteLine("\nBefore swapping:");
+            Console.WriteLine("Number 1: " + number1);
+            Console.WriteLine("Number 2: " + number2);
+
+            // Swap the numbers
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+
+            // Display the numbers after swapping
+            Console.WriteLine("\nAfter swapping:");
+            Console.WriteLine("Number 1: " + number1);
+            Console.WriteLine("Number 2: " + number2);
+
+            // Wait for the user to press a key before closing
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
     }
 }
-/*
- ** Sample I/O
- **
- ** INPUT: x = 10 
- 	   y = 5
- 
- ** OUTPUT: x = 5
- **         y = 10
- ** Sum till nth term.
- **
- ** Time complexity - O(n)
- ** 
- ** Space complexity - O(1)
- **
- */			
