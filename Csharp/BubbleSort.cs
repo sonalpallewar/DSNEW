@@ -61,14 +61,3 @@ public class PancakeSort
         }
     }
 }
-
-public static class Extensions
-{
-    public static string ArrayIntToString(int[] array)
-    {
-        var result = string.Empty;
-        foreach (int pos in array)
-            result += pos + " ";
-        return result;
-    }
-}
