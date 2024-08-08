@@ -1,4 +1,7 @@
 using System;
+
+namespace MyFirstApp
+{
     class Program
     {
         static void Main(string[] args)
@@ -6,4 +9,4 @@ using System;
             Console.WriteLine("Hello, World!");
         }
     }
-
+}
